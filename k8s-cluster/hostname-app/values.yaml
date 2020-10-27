@@ -1,0 +1,21 @@
+# Default values for hostname-app.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+namespace: hostname-ns
+
+replicaCount: 2
+
+image:
+  repository: k8s.gcr.io/serve_hostname
+  pullPolicy: IfNotPresent
+  # Overrides the image tag whose default is the chart appVersion.
+  tag: "v1.4"
+
+service:
+  name: hostname-service
+  type: ClusterIP
+  port: 80
+
+ingress:
+  enabled: true
