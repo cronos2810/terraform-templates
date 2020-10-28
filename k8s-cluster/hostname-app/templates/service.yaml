@@ -11,9 +11,8 @@ metadata:
 spec:
   type: {{ .Values.service.type }}
   ports:
-    - name: http
-      port: {{ .Values.service.port }}
+    - port: {{ .Values.service.port }}
       protocol: TCP
-      targetPort: http
+      targetPort: 9376
   selector:
     {{- include "hostname-app.selectorLabels" . | nindent 4 }}
