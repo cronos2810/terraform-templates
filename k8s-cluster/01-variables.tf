@@ -28,6 +28,11 @@ variable "machine_type" {
   type        = string
 }
 
+variable "disk_size_gb" {
+  description = "Node disk size"
+  type        = string
+}
+
 variable "node_count" {
   description = "Node Pool node count"
   type        = number
