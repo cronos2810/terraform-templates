@@ -18,6 +18,11 @@ variable "cluster_name" {
   type        = string
 }
 
+variable "master_version" {
+  description = "Min master version."
+  type        = string
+}
+
 variable "node_pool_name" {
   description = "Node Pool name"
   type        = string

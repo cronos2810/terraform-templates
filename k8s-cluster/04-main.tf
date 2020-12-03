@@ -12,6 +12,8 @@ resource "google_container_cluster" "primary" {
 
   network    = "default"
   subnetwork = "default"
+
+  min_master_version = var.master_version
   
   # VPC-native Cluster for Standalone Network Endpoint Groups (NEGs) 
   ip_allocation_policy {
